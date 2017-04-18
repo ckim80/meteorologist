@@ -26,9 +26,6 @@ class MeteorologistController < ApplicationController
     raw_data2 = open(url2).read
     parsed_data2 = JSON.parse(raw_data2)
     #
-    # latitude = parsed_data["results"][0]["geometry"]["location"]["lat"]
-    #
-    # @longitude = parsed_data["results"][0]["geometry"]["location"]["lng"]
 
 
     @current_temperature = parsed_data2["currently"]["temperature"]
